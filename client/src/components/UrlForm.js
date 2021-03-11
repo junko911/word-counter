@@ -6,7 +6,7 @@ const UrlForm = props => {
     <>
       <Form>
         <FormGroup>
-          <Label for="url">URL</Label>
+          <Label for="url">Enter URL</Label>
           <Input
             type="url"
             name="url"
