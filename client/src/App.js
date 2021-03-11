@@ -1,24 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Word Counter</h1>
+      <Form>
+        <FormGroup>
+          <Label for="url">URL</Label>
+          <Input
+            type="url"
+            name="url"
+            placeholder="https://www.example.com" />
+        </FormGroup>
+      </Form>
+      <Button>Submit</Button>
+    </>
   );
 }
 
