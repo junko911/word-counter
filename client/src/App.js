@@ -1,5 +1,6 @@
 import './App.css';
-import { Container, Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
+import UrlForm from './components/UrlForm';
 
 function App() {
   return (
@@ -7,16 +8,7 @@ function App() {
       <h1>Word Counter</h1>
       <Row>
         <Col>
-          <Form>
-            <FormGroup>
-              <Label for="url">URL</Label>
-              <Input
-                type="url"
-                name="url"
-                placeholder="https://www.example.com" />
-            </FormGroup>
-          </Form>
-          <Button>Submit</Button>
+          <UrlForm/>
         </Col>
       </Row>
     </Container>
