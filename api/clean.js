@@ -1,5 +1,5 @@
 exports.clean = string => {
-  const alphaNumeric = string.replace(/[^0-9A-Za-z']+/g," ");
-  const lowerCase = alphaNumeric.toLowerCase();
+  const alphabet = string.replace(/[^A-Za-z']+/g," ");
+  const lowerCase = alphabet.toLowerCase();
   return lowerCase;
 }
