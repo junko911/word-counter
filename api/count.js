@@ -1,6 +1,6 @@
 exports.count = function(string) {
   let map = {};
-  const words = string.split(" ");
+  const words = string.split(" ").filter( word => word !== "");
 
   for(let i = 0; i < words.length; i++) {
     const item = words[i];
