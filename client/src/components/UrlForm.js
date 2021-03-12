@@ -1,19 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 
 const UrlForm = props => {
-  return(
+  const [url, changeUrl] = useState("")
+
+  const submitHandler = e => {
+    e.preventDefault()
+  }
+
+  return (
     <>
-      <Form>
+      <Form onSubmit={submitHandler}>
         <FormGroup>
           <Label for="url">Enter URL</Label>
           <Input
             type="url"
             name="url"
-            placeholder="https://www.example.com" />
+            placeholder="https://www.example.com"
+            onChange={e => changeUrl(e.target.value)}
+            value={url}
+          />
         </FormGroup>
+        <Button>Submit</Button>
       </Form>
-      <Button>Submit</Button>
     </>
   )
 }
