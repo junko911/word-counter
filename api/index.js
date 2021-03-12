@@ -3,7 +3,7 @@ const app = express();
 const { count } = require('./count') 
 
 app.get('/', function(req, res) {
-  const result = count()
+  const result = count("hello world")
   res.send(result)
 });
 
