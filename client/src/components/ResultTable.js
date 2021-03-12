@@ -2,8 +2,7 @@ import React from 'react';
 import { useTable, useSortBy } from 'react-table';
 import { Table } from 'reactstrap'
 
-const ResultTable = () => {
-
+const ResultTable = ({ result }) => {
   const data = React.useMemo(
     () => [
       {
