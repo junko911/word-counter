@@ -21,6 +21,12 @@ function App() {
     fetch('http://localhost:3000/', options)
     .then(res => res.json())
     .then(data => {
+      let wordsDb = localStorage.getItem('wordsDb') || '{}'
+      let records = JSON.parse(wordsDb)
+
+      const date = Date.now()
+      records[Date.now()] = {url: url, result: data}
+      localStorage.setItem('wordsDb', JSON.stringify(records))
       changeResult(data)
     })
   }
