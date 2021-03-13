@@ -25,7 +25,7 @@ function App() {
       let records = JSON.parse(wordsDb)
 
       const date = Date.now()
-      records[Date.now()] = {url: url, result: data}
+      records[date] = {url: url, result: data}
       localStorage.setItem('wordsDb', JSON.stringify(records))
       changeResult(data)
     })
