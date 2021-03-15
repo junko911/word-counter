@@ -13,34 +13,61 @@ $ git clone git@github.com:junko911/word-counter.git
 $ cd word-counter
 ```
 
-To install and set up the library, run:
+### Server
+To install and set up, run:
 
 ```bash
-$ npm --prefix ./api install ./api
-$ npm --prefix ./client install ./client
+$ cd api
+$ npm install
 ```
 
 Or if you prefer using yarn:
 
 ```bash
-$ yarn --cwd ./api install
-$ yarn --cwd ./client install
+$ cd api
+$ yarn install
+```
+
+### Client
+For client, run:
+```bash
+$ cd ../client
+$ npm install
+```
+
+Or:
+
+```bash
+$ cd ../client
+$ yarn install
 ```
 
 ## Usage
 
-Running the project:
+To run the project, first run:
 
 ```bash
-$ npm --prefix ./api start ./api
-$ npm --prefix ./client start ./client
+$ cd ../api
+$ npm start
 ```
 
-Or,
+Or:
 
 ```bash
-$ yarn --cwd ./api start
-$ yarn --cwd ./client start
+$ cd ../api
+$ yarn start
 ```
+
+and then, you need to run client server:
+```bash
+$ cd ../client
+$ npm start
+```
+Or:
+```bash
+$ cd ../client
+$ yarn start
+```
+
 
 The project should now be running on [localhost:3001](http://localhost:3001/).
