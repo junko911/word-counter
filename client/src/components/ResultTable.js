@@ -17,7 +17,12 @@ const ResultTable = db => {
     return Object.keys(obj.db).map(key => {
       return (
         <tr key={key}>
-          <td id={key} onClick={e => clickHandler(e)}>{key}</td>
+          <td
+            id={key}
+            className="text-primary"
+            style={{ cursor: "pointer" }}
+            onClick={e => clickHandler(e)}
+          >{key}</td>
           <td>{obj.db[key]["url"]}</td>
         </tr>
       )
