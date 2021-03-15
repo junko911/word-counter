@@ -5,8 +5,6 @@ import UrlForm from './components/UrlForm';
 import ResultTable from './components/ResultTable';
 
 function App() {
-  const [result, changeResult] = useState({})
-
   const submitUrl = url => {
     const options = {
       method: 'POST',
@@ -27,7 +25,6 @@ function App() {
       const date = Date.now()
       records[date] = {url: url, result: data}
       localStorage.setItem('wordsDb', JSON.stringify(records))
-      changeResult(data)
     })
   }
 
@@ -35,7 +32,7 @@ function App() {
     <Container className="mt-2">
       <h1>Word Counter</h1>
       <UrlForm submitUrl={submitUrl}/>
-      <ResultTable result={result}/>
+      <ResultTable/>
     </Container>
   );
 }
