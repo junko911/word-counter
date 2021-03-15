@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import React, { useState } from 'react'
+import { Form, FormGroup, Label, Input, Button } from 'reactstrap'
 
 const UrlForm = ({ submitUrl }) => {
   const [url, changeUrl] = useState("")
@@ -29,4 +29,4 @@ const UrlForm = ({ submitUrl }) => {
   )
 }
 
-export default UrlForm;
+export default UrlForm
