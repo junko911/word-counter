@@ -1,12 +1,33 @@
-import React from "react"
-import { Table } from "reactstrap"
+import React, { useState } from "react"
+import { Table, Modal, ModalBody } from "reactstrap"
 
 const ResultTable = db => {
+  const [modal, setModal] = useState(false)
+  const toggle = () => setModal(!modal)
+  const [result, setResult] = useState({})
+
+  const clickHandler = e => {
+    const results = db.db[e.target.id]["result"]
+    setResult(results)
+    setModal(true)
+  }
+
+  const genModalRows = obj => {
+    return Object.keys(obj).map(ele => {
+      return (
+        <tr key={ele}>
+          <td>{ele}</td>
+          <td>{obj[ele]}</td>
+        </tr>
+      )
+    })
+  }
+
   const genRows = obj => {
     return Object.keys(obj.db).map(key => {
       return (
         <tr key={key}>
-          <td>{key}</td>
+          <td id={key} onClick={e => clickHandler(e)}>{key}</td>
           <td>{obj.db[key]["url"]}</td>
         </tr>
       )
@@ -27,6 +48,24 @@ const ResultTable = db => {
           {genRows(db)}
         </tbody>
       </Table>
+      <Modal isOpen={modal} toggle={toggle}>
+        <ModalBody>
+          {modal ?
+          <Table>
+            <thead>
+              <tr>
+                <th>Word</th>
+                <th>Count</th>
+              </tr>
+            </thead>
+            <tbody>
+              {genModalRows(result)}
+            </tbody>
+          </Table>
+          : null
+          }
+        </ModalBody>
+      </Modal>
     </>
   )
 }
