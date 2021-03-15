@@ -27,16 +27,16 @@ class App extends React.Component {
         const newDb = this.state.db
         const date = new Date().toLocaleString()
         newDb[date] = { url: url, result: data }
-        this.setState({db: newDb})
+        this.setState({ db: newDb })
       })
   }
 
-  render () {
+  render() {
     return (
       <Container className="mt-2">
         <h1>Word Counter</h1>
         <UrlForm submitUrl={this.submitUrl} />
-        <ResultTable db={this.state.db}/>
+        <ResultTable db={this.state.db} />
       </Container>
     )
   }
