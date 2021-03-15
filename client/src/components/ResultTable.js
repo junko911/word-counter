@@ -1,17 +1,13 @@
-import React from 'react';
-import { Table } from 'reactstrap'
+import React from "react"
+import { Table } from "reactstrap"
 
-const ResultTable = () => {
-  
-  let wordsDb = localStorage.getItem('wordsDb')
-  let records = JSON.parse(wordsDb)
-
-  const genRows = records => {
-    return Object.keys(records).map(r => {
-      return(
-        <tr key={r}>
-          <td>{r}</td>
-          <td>{records[r]["url"]}</td>
+const ResultTable = db => {
+  const genRows = obj => {
+    return Object.keys(obj.db).map(key => {
+      return (
+        <tr key={key}>
+          <td>{key}</td>
+          <td>{obj.db[key]["url"]}</td>
         </tr>
       )
     })
@@ -28,11 +24,11 @@ const ResultTable = () => {
           </tr>
         </thead>
         <tbody>
-          {genRows(records)}
+          {genRows(db)}
         </tbody>
       </Table>
     </>
   )
 }
 
-export default ResultTable;
+export default ResultTable
