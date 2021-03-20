@@ -58,7 +58,7 @@ $ cd ../api
 $ yarn start
 ```
 
-and then, you need to run client server:
+and then, you need to run client:
 ```bash
 $ cd ../client
 $ npm start
@@ -69,5 +69,6 @@ $ cd ../client
 $ yarn start
 ```
 
+Make sure you run the server first and then the cloent so the client will run on [localhost:3001](http://localhost:3001/)
 
 The project should now be running on [localhost:3001](http://localhost:3001/).
