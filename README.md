@@ -1,5 +1,9 @@
 # Word Counter
 
+## Demo
+
+![Demo](https://user-images.githubusercontent.com/29763651/111882471-30145e00-898c-11eb-98dd-496e89ce9908.mov)
+
 ## Requirements
 
 This project requires NodeJS and npm/yarn installed in your environment.
