@@ -69,6 +69,6 @@ $ cd ../client
 $ yarn start
 ```
 
-Make sure you run the server first and then the cloent so the client will run on [localhost:3001](http://localhost:3001/)
+Make sure you run the server first and then the client so the client will run on [localhost:3001](http://localhost:3001/)
 
 The project should now be running on [localhost:3001](http://localhost:3001/).
