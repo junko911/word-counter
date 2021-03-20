@@ -1,8 +1,7 @@
 # Word Counter
 
 ## Demo
-
-![Demo](https://user-images.githubusercontent.com/29763651/111882471-30145e00-898c-11eb-98dd-496e89ce9908.mov)
+![word-counter-demo](https://user-images.githubusercontent.com/29763651/111882708-61d9f480-898d-11eb-9664-762b7cc7a75a.gif)
 
 ## Requirements
 
