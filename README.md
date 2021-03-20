@@ -29,7 +29,7 @@ $ yarn install
 ```
 
 ### Client
-For client, run:
+For the client, run:
 ```bash
 $ cd ../client
 $ npm install
@@ -44,7 +44,7 @@ $ yarn install
 
 ## Usage
 
-To run the project, first run:
+To use the project, first run:
 
 ```bash
 $ cd ../api
@@ -57,8 +57,9 @@ Or:
 $ cd ../api
 $ yarn start
 ```
+The server should start running on [localhost:3000](http://localhost:3000/).
 
-and then, you need to run client:
+Now, on another tab, you need to run the client:
 ```bash
 $ cd ../client
 $ npm start
@@ -69,6 +70,6 @@ $ cd ../client
 $ yarn start
 ```
 
-Make sure you run the server first and then the client so the client will run on [localhost:3001](http://localhost:3001/)
+Make sure you run the server first and then the client so the client will run on [localhost:3001](http://localhost:3001/).
 
 The project should now be running on [localhost:3001](http://localhost:3001/).
