@@ -1,7 +1,7 @@
 # Word Counter
 
 ## Demo
-![word-counter-demo](../word-counter-demo.gif)
+![word-counter-demo](word-counter-demo.gif)
 
 ## Requirements
 
